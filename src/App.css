@@ -238,3 +238,258 @@ body {
     padding: 24px 16px;
   }
 }
+
+/* --- Multiplayer & Friends Mode Styles --- */
+.menu-container,
+.setup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.menu-subtitle {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  margin-top: -8px;
+  margin-bottom: 28px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.menu-btn {
+  width: 100%;
+  padding: 16px 20px;
+  border: 3px solid rgba(255, 251, 239, 0.96);
+  background: linear-gradient(180deg, #3f4a3c 0%, #30382e 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 rgba(45, 48, 40, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 7px 7px 0 rgba(45, 48, 40, 0.24);
+}
+
+.menu-btn.alternative {
+  background: linear-gradient(180deg, var(--plum) 0%, #5b4d6e 100%);
+  box-shadow: 5px 5px 0 rgba(91, 77, 110, 0.22);
+}
+
+.menu-btn.alternative:hover {
+  box-shadow: 7px 7px 0 rgba(91, 77, 110, 0.24);
+}
+
+.setup-card {
+  width: 100%;
+  padding: 24px 20px;
+  background: rgba(247, 243, 228, 0.76);
+  border: 3px solid rgba(255, 251, 239, 0.95);
+  box-shadow: 5px 5px 0 rgba(84, 95, 75, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sketch-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 3px solid var(--ink);
+  background-color: var(--cream);
+  color: var(--ink);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.2s ease;
+}
+
+.sketch-input:focus {
+  border-color: var(--jade);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 2px dashed var(--ink-soft);
+  opacity: 0.3;
+}
+
+.divider span {
+  padding: 0 10px;
+}
+
+.setup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.action-btn {
+  padding: 12px 18px;
+  border: 3px solid var(--ink);
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 var(--ink);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.action-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 var(--ink);
+}
+
+.action-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.join-group {
+  display: flex;
+  gap: 10px;
+}
+
+.join-group .code-input {
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.back-btn {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border: 2px solid var(--ink-soft);
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--ink-soft);
+  color: var(--cream);
+}
+
+.error-message {
+  padding: 10px;
+  background-color: rgba(217, 83, 79, 0.1);
+  border: 2px solid #d9534f;
+  color: #d9534f;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.waiting-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-code-display {
+  margin-top: 4px;
+  padding: 6px 12px;
+  background: rgba(247, 243, 228, 0.9);
+  border: 2px dashed var(--jade);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.room-code-display strong {
+  font-family: "Cinzel", serif;
+  font-size: 1.1rem;
+  color: var(--jade-deep);
+  letter-spacing: 0.05em;
+}
+
+.game-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+  width: 100%;
+}
+
+.game-actions .reset-btn,
+.game-actions .leave-btn {
+  margin-top: 0;
+  flex: 1;
+}
+
+.leave-btn {
+  padding: 14px 20px;
+  border: 3px solid rgba(255, 251, 239, 0.96);
+  background: linear-gradient(180deg, #8c3b3b 0%, #6e2d2d 100%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 rgba(110, 45, 45, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.leave-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 7px 7px 0 rgba(110, 45, 45, 0.24);
+}
+
+.board-locked {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
